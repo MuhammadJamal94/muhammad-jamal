@@ -1,0 +1,38 @@
+{
+  "name": "umm_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "api-test": "cypress open",
+    "api-test-extended": "cypress open --config-file sandbox.json",
+    "lint": "eslint ./",
+    "lint:fix": "eslint ./ --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.(js|jsx)": [
+      "npm run lint:fix"
+    ]
+  },
+  "dependencies": {
+    "cypress": "^6.0.0",
+    "mocha": "^8.2.0"
+  },
+  "devDependencies": {
+    "@cypress/eslint-plugin-dev": "^5.0.2",
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-chai-friendly": "^0.6.0",
+    "eslint-plugin-cypress": "^2.11.2",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "^4.3.5",
+    "lint-staged": "^10.5.3"
+  },
+  "author": "",
+  "license": "ISC"
+}

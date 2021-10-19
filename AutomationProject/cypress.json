@@ -1,0 +1,26 @@
+{
+  "extends": "./cypress.json",
+  "video": false,
+  "baseUrl": "http://localhost:3030/",
+
+  "env": {
+    "products_count":"",
+    "new_product":{
+      "name":"Playstation5",
+      "type":"Gaming",
+      "shipping":50,
+      "description":"Gaming Console",
+      "manufacturer":"Sony",
+      "model":"PS5",
+      "price":5555,
+      "id":""
+    },
+    "updated_product":{
+      "name":"Playstation6",
+      "type":"NewGaming",
+      "shipping":100,
+      "model":"PS6",
+      "price":6666
+    }
+  }
+}
